@@ -20,7 +20,7 @@ export const App = () => {
         avatar={userData.avatar}
         stats={userData.stats}
       />
-      React homework template
+      
     </div>
   );
 };

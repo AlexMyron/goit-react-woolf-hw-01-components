@@ -7,20 +7,20 @@ const Profile = ({ username, tag, location, avatar, stats }) => {
   }
 
   return (
-    <div className="profile">
-      <div className="description">
-        <img src={avatar} alt="User avatar" className="avatar" />
-        <p className="name">{username}</p>
-        <p className="tag">{tag}</p>
-        <p className="location">{location}</p>
+    <div className={classes.profile}>
+      <div className={classes.description}>
+        <img src={avatar} alt="User avatar" className={classes.avatar} />
+        <p className={classes.name}>{username}</p>
+        <p>@{tag}</p>
+        <p>{location}</p>
       </div>
 
-      <ul className="stats">
+      <ul className={classes.stats}>
         {statsList &&
           statsList.map(({ label, quantity }) => (
             <li key={label}>
-              <span className="label">{label}</span>
-              <span className="quantity">{quantity}</span>
+              <span className={classes.label}>{label}</span>
+              <span className={classes.quantity}>{quantity}</span>
             </li>
           ))}
       </ul>
