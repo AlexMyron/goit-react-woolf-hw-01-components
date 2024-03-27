@@ -2,6 +2,9 @@ import classes from './Statistics.module.css';
 
 const Statistics = ({ stats, title }) => {
   const colors = ['#54c7ec', '#b854ec', '#ffba0e', '#fa38ee', '#00a400'];
+  const defineColor = idx => {
+    return colors[idx % colors.length]
+  };
 
   return (
     <section className={classes.statistics}>
@@ -10,8 +13,11 @@ const Statistics = ({ stats, title }) => {
       <ul className={classes.stat}>
         {stats &&
           stats.map(({ id, label, percentage }, idx) => (
-            
-            <li className={classes.item} key={id} style={{backgroundColor: colors[idx]}}>
+            <li
+              className={classes.item}
+              key={id}
+              style={{ backgroundColor: defineColor(idx) }}
+            >
               <span className={classes.label}>{label}</span>
               <span className={classes.percentage}>{percentage}</span>
             </li>
