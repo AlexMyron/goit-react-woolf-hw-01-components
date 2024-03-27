@@ -1,0 +1,23 @@
+.item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 32px;
+  width: 300px;
+  box-shadow: 2px 5px 15px -3px rgba(0,0,0,0.7);
+  font-size: 24px;
+}
+
+.online {
+  background-color: green;
+}
+
+.offline {
+  background-color: red;
+}
+
+.status {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
