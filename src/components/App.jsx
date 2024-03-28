@@ -32,9 +32,11 @@ export const App = () => {
 
       <Statistics title="Upload stats" stats={statsData} />
 
-      <FriendList friends={friendsData} />
+      {!!friendsData?.length && <FriendList friends={friendsData} />}
 
-      <TransactionsHistory items={transactionData} />
+      {!!transactionData?.length && (
+        <TransactionsHistory items={transactionData} />
+      )}
     </div>
   );
 };

@@ -60,3 +60,9 @@
   font-size: 20px;
   font-weight: 500;
 }
+
+.warn {
+  font-size: 20px;
+  padding: 20px 40px;
+  text-align: center;
+}
