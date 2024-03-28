@@ -8,7 +8,7 @@ const Statistics = ({ stats, title }) => {
 
   return (
     <section className={classes.statistics}>
-      <h2 className={classes.title}>{title}</h2>
+      {title && <h2 className={classes.title}>{title}</h2>}
 
       {!!stats?.length && (
         <ul className={classes.stat}>
